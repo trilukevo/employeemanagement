@@ -6,7 +6,10 @@ public class Company {
 	ArrayList<Employee> empList= new ArrayList<Employee>();
 	
 	void addEmployee(Employee e) {
-	empList.add(e);
+		if(empList.size() < 200)
+			empList.add(e);
+		else
+			System.out.println("Hết slot!");
 	}
 	
 	void showEmployeeList() {
