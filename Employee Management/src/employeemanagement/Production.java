@@ -11,7 +11,8 @@ public class Production extends Employee{
 		this.name = name;
 		this.code = generateCode(code);
 		
-		System.out.println(name + code);
+		System.out.println("Name: "+ this.getName());
+		System.out.println("Position: " + this.getCode());
 	}
 	
 	String generateCode(String code) {

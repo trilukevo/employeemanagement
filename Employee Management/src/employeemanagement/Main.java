@@ -12,17 +12,45 @@ public class Main {
 		System.out.println("5-Cho biết có bao nhiêu quản lý");
 	}
 	
-	public static void main(String[] args) {	
-		Menu();
-		Scanner scan = new Scanner(System.in);
-		int select = scan.nextInt();
+	public static void main(String[] args) {
+		Company company = new Company();
 		
-		if(select == 1) {
-			System.out.println("a-Production");
-			System.out.println("b-Worker");
-			System.out.println("c-Manager");
-			System.out.println("d-Quit");
-			String eSelect = scan.next();
+		while(true) {
+			Menu();
+			Scanner scan = new Scanner(System.in);
+			int select = scan.nextInt();			
+			switch (select) {
+			case 1:
+				String eSelect;
+				do {
+				System.out.println("a-Production");
+				System.out.println("b-Worker");
+				System.out.println("c-Manager");
+				System.out.println("d-Quit");
+				
+				eSelect = scan.next();
+					switch (eSelect) {
+					case "a":
+						Employee p1 = new Production();
+						company.addEmployee(p1);
+						break;
+					case "b":
+						Employee p2 = new Worker();
+						company.addEmployee(p2);
+						break;
+					case "c":
+						Employee p3 = new Manager();
+						company.addEmployee(p3);
+						break;
+					default:
+						break;
+					}
+				}while(!eSelect.equalsIgnoreCase("d"));
+				break;
+			case 3:
+				company.showEmployeeList();
+				break;
+			}
 		}
 	}
 
