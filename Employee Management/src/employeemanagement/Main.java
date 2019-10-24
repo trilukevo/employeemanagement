@@ -80,7 +80,12 @@ public class Main {
 				break;
 			case 4:
 				System.out.println("Tổng số nhân viên: " + company.empList.size());
+				break;
+			case 5:
+				System.out.println("Tổng số quản lý: " + company.countEmployee());
+				break;
 			}
+			
 		}
 	}
 

@@ -17,4 +17,12 @@ public class Company {
 			System.out.println("Name: "+ e.getName() +"||"+ "Position: "+ e.getCode());
 		}
 	}
+	int countEmployee() {
+		int count = 0;
+		for (Employee e : empList) {
+			if(e.getCode().contains("MAG"));
+			count++;
+		}
+		return count;
+	}
 }
