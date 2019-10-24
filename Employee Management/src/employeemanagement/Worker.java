@@ -1,6 +1,7 @@
 package employeemanagement;
 
 public class Worker extends Employee {
+	
 	Worker(){
 		System.out.println("Input name:");
 		String name = scan.next();

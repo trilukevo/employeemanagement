@@ -46,6 +46,7 @@ public class Main {
 						company.addEmployee(p3);
 						break;
 					default:
+						System.out.println("Vui lòng chọn từ a-c!");
 						break;
 					}
 				}while(!eSelect.equalsIgnoreCase("d"));
@@ -72,6 +73,7 @@ public class Main {
 						company.addEmployee(p3);
 						break;
 					default:
+						System.out.println("Vui lòng chọn từ a-c!");
 						break;
 					}				
 				break;
@@ -83,6 +85,9 @@ public class Main {
 				break;
 			case 5:
 				System.out.println("Tổng số quản lý: " + company.countEmployee());
+				break;
+			default:
+				System.out.println("Vui lòng chọn từ 1-5!");
 				break;
 			}
 			
